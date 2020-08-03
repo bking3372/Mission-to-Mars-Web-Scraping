@@ -1,0 +1,31 @@
+/* CSS for Mission to Mars */
+
+table.dataframe, .dataframe th, .dataframe td {
+    border: none;
+    border-bottom: 1px solid darkgray;
+    border-collapse: collapse;
+    text-align: left;
+    padding: 10px;
+    font-size: 12px;
+}
+
+tr:nth-child(odd) {background-color: lightgray;}
+
+.media-container {
+    display: flex;
+}
+
+.img1 {
+    width: 300px;
+    padding: 5px;
+    display: inline-block;
+    }
+
+img.displayed1 {
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.image-row {
+    text-align: center;
+}

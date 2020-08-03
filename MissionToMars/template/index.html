@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission to Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type=text/css href="static/style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+    <h1>Mission to Mars</h1>
+    <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+  </div>
+  
+  <!-- Mars News -->
+  <div class="row">
+    <div class="col-md-7">
+      <h2 class="heading">Latest Mars News</h2>
+      <h4>{{mars_info.title}}</h4>
+      <p>{{mars_info.paragraph}}</p>
+    </div>
+
+  <!-- Mars Weather -->  
+    <div class="col-md-3">
+      <h2 class="heading">Mars Weather</h2>
+      <p>The current weather on Mars is: {{mars_info.weather}}</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Mars Featured Image -->
+  <div class="row">
+    <div class="col-md-7">
+      <h2 class="heading">Featured Mars Image</h2>
+      <img alt="Mars Featured Image" src="{{mars_info.feat_img}}" width=600px>
+    </div>
+
+  <!-- Mars Facts -->  
+    <div class="col-md-3">
+        <h2 class="heading">Mars Facts</h2>
+        {{mars_info.mars_table|safe}}
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Mars Hemispheres -->
+ 
+  <div class="row">
+    <div class="col-md-12">
+        <h3 class="heading">Mars Hemispheres</h3>
+        <div class="media-container">
+            {% for item in mars_info.hemisphere_dict %}
+              <div class="media">
+                <h4>{{item.caption}}</h4>
+                <img src="{{item.image}}/full.jpg" width=800px>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+  </div>
+
+
+    <!--script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script-->
+</body>
+</html>
+
+
