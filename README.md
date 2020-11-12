@@ -1,7 +1,6 @@
 # Mission to Mars:  updating Mars information with web scraping
 
-
-Objective:  Build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
+### Objective:  Build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page using Jupyter Notebook, BeautifulSoup, Pandas, and Requests/Splinter.
 
 This web application includes the following information about Mars:
 * The latest Mars news from the NASA Mars News site
